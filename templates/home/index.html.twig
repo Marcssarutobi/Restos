@@ -1,0 +1,238 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+     {# Home Section start #}
+
+        <section class="home">
+            <div class="swiper home-slider">
+                <div class="swiper-wrapper wrapper">
+
+                    <div class="swiper-slide slide">
+                        <div class="content">
+                            <span>notre plat spécial</span>
+                            <h3>poulet frit</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, neque. Ducimus, voluptate.</p>
+                            <a href="" class="btn btn-order">Commander Maintenant</a>
+                        </div>
+                        <div class="image">
+                            <img src="{{asset('img/img3.jpg')}}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slide">
+                        <div class="content">
+                            <span>notre plat spécial</span>
+                            <h3>hamburger chaud</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, neque. Ducimus, voluptate.</p>
+                            <a href="" class="btn btn-order">Commander Maintenant</a>
+                        </div>
+                        <div class="image">
+                            <img src="{{asset('img/img2.jpg')}}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slide">
+                        <div class="content">
+                            <span>notre plat spécial</span>
+                            <h3>nouilles épicée</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, neque. Ducimus, voluptate.</p>
+                            <a href="" class="btn btn-order">Commander Maintenant</a>
+                        </div>
+                        <div class="image">
+                            <img src="{{asset('img/img1.jpg')}}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+
+    {# Home Section end #}
+    {# Section dish start #}
+        <section class="dishes">
+
+            <h3 class="sub-heading">nos plats</h3>
+            <h1 class="heading">plats populaire</h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                    <img src="{{asset('img/img1.jpg')}}" alt="">
+                    <h3>pizza</h3>
+                    <span>8000 FCFA</span>
+                    <a href="" class="btn btn-order">Consulté</a>
+                </div>
+
+                <div class="box">
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                    <img src="{{asset('img/img2.jpg')}}" alt="">
+                    <h3>pizza</h3>
+                    <span>8000 FCFA</span>
+                    <a href="" class="btn btn-order">Consulté</a>
+                </div>
+
+                <div class="box">
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                    <img src="{{asset('img/img3.jpg')}}" alt="">
+                    <h3>pizza</h3>
+                    <span>8000 FCFA</span>
+                    <a href="" class="btn btn-order">Consulté</a>
+                </div>
+
+                <div class="box">
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                    <img src="{{asset('img/img4.jpg')}}" alt="">
+                    <h3>pizza</h3>
+                    <span>8000 FCFA</span>
+                    <a href="" class="btn btn-order">Consulté</a>
+                </div>
+
+                <div class="box">
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                    <img src="{{asset('img/img5.jpg')}}" alt="">
+                    <h3>pizza</h3>
+                    <span>8000 FCFA</span>
+                    <a href="" class="btn btn-order">Consulté</a>
+                </div>
+
+                <div class="box">
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                    <img src="{{asset('img/img6.png')}}" alt="">
+                    <h3>pizza</h3>
+                    <span>8000 FCFA</span>
+                    <a href="" class="btn btn-order">Consulté</a>
+                </div>
+
+            </div>
+
+        </section>
+    {# Section dish end #}
+    {# Section about us start #}
+        <section class="about">
+            <h3 class="sub-heading">à propos de nous</h3>
+            <h1 class="heading">pourquoi nous choisir ?</h1>
+
+            <div class="row">
+                <div class="image">
+                    <img src="{{asset('img/img5.jpg')}}" alt="">
+                </div>
+                <div class="content">
+                    <h3>meilleure nourriture du pays</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque neque, optio minima alias dolore aliquid quas fugiat molestiae aut nostrum, distinctio error, eius recusandae debitis qui iusto. Harum, reprehenderit tempore.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, esse minima alias deleniti iure quis et eius quisquam sit asperiores.</p>
+                    <div class="icons-containers">
+                        <div class="icons">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>livraison gratuite</span>
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>paiement facile</span>
+                        </div>
+                        <div class="icons">
+                            <i class="fas fa-headset"></i>
+                            <span>24/7 service</span>
+                        </div>
+                    </div>
+                    <a href="" class="btn btn-order">Afficher plus</a>
+                </div>
+            </div>
+
+        </section>
+    {# Section about us end#}
+    {# section commentaire start #}
+
+        <section class="review">
+
+            <h3 class="sub-heading">avis client</h3>
+            <h1 class="heading">ce qu'ils disent</h1>
+
+            <div class="swiper-container review-slide">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide slide">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="user">
+                            <img src="{{asset('img/user1.jpeg')}}" alt="">
+                            <div class="user-info">
+                                <h3>John Doe</h3>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellendus vel minus, aliquam officia minima! Numquam tempora perspiciatis quo voluptates aut, veniam, quasi cumque asperiores sed consequuntur accusamus reprehenderit dolorum.</p>
+                    </div>
+
+                     <div class="swiper-slide slide">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="user">
+                            <img src="{{asset('img/user1.jpeg')}}" alt="">
+                            <div class="user-info">
+                                <h3>John Doe</h3>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellendus vel minus, aliquam officia minima! Numquam tempora perspiciatis quo voluptates aut, veniam, quasi cumque asperiores sed consequuntur accusamus reprehenderit dolorum.</p>
+                    </div>
+
+                    <div class="swiper-slide slide">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="user">
+                            <img src="{{asset('img/user2.jpeg')}}" alt="">
+                            <div class="user-info">
+                                <h3>John Doe</h3>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellendus vel minus, aliquam officia minima! Numquam tempora perspiciatis quo voluptates aut, veniam, quasi cumque asperiores sed consequuntur accusamus reprehenderit dolorum.</p>
+                    </div>
+
+                    <div class="swiper-slide slide">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="user">
+                            <img src="{{asset('img/user2.jpeg')}}" alt="">
+                            <div class="user-info">
+                                <h3>John Doe</h3>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellendus vel minus, aliquam officia minima! Numquam tempora perspiciatis quo voluptates aut, veniam, quasi cumque asperiores sed consequuntur accusamus reprehenderit dolorum.</p>
+                    </div>
+
+                    <div class="swiper-slide slide">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="user">
+                            <img src="{{asset('img/user3.jpg')}}" alt="">
+                            <div class="user-info">
+                                <h3>John Doe</h3>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellendus vel minus, aliquam officia minima! Numquam tempora perspiciatis quo voluptates aut, veniam, quasi cumque asperiores sed consequuntur accusamus reprehenderit dolorum.</p>
+                    </div>
+
+                    <div class="swiper-slide slide">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="user">
+                            <img src="{{asset('img/user4.jpeg')}}" alt="">
+                            <div class="user-info">
+                                <h3>John Doe</h3>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellendus vel minus, aliquam officia minima! Numquam tempora perspiciatis quo voluptates aut, veniam, quasi cumque asperiores sed consequuntur accusamus reprehenderit dolorum.</p>
+                    </div>
+            
+                </div>
+            
+            </div>
+
+        </section>
+
+    {# section commentaire end #}
+{% endblock %}
