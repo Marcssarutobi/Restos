@@ -4,11 +4,17 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ *  @UniqueEntity(
+ *     fields={"email"},
+ *     message="L'adresse email que vous avez indiqué est déjà utilisé"
+ * )
  */
 class User implements UserInterface,PasswordAuthenticatedUserInterface
 {
@@ -30,7 +36,7 @@ class User implements UserInterface,PasswordAuthenticatedUserInterface
     private $prenom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $email;
 
@@ -54,12 +60,20 @@ class User implements UserInterface,PasswordAuthenticatedUserInterface
      */
     private $password;
 
+    /** 
+     * @Assert\EqualTo(propertyPath="password",message="Vous n'avez pas tapé le même mot de passe")
+    */
     public $confirm_password;
 
     /**
      * @ORM\Column(type="json")
      */
     private $roles = [];
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image;
 
     public function getId(): ?int
     {
@@ -205,5 +219,17 @@ class User implements UserInterface,PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
     }
 }

@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Validator\Constraints\Length;
 
 class RegistrationType extends AbstractType
 {
@@ -59,7 +60,16 @@ class RegistrationType extends AbstractType
                 'attr'=>[
                     'Placeholder'=>'Veuillez entrer un mots de passe ...'
                 ],
-                'label'=>'Mots de passe'
+                'label'=>'Mots de passe',
+                'invalid_message'=>'Mot de passe incorrect',
+                'required'=>true,
+                'constraints' =>[
+                    new Length([
+                        'min' => 8,
+                        'minMessage'=> 'Votre mots de passe doit faire au minimum 8 caratère',
+                        'max' => 3000
+                    ])
+                ]
             ])
             ->add('confirm_password',PasswordType::class,[
                 'attr'=>[
