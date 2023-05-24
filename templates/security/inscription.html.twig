@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %} 
+
+{% block title %} Inscription {% endblock %}
+
+{% block body %}
+<section></section>
+<section class="inscription ">
+    <h3 class="sub-heading">Effectuer votre</h3>
+    <h1 class="heading">Inscription</h1>
+
+    <div class="formulaire">
+        {{form_start(form)}}
+            {{form_row(form.nom)}}
+            {{form_row(form.prenom)}}
+            {{form_row(form.email)}}
+            {{form_row(form.sexe)}}
+            {{form_row(form.contact)}}
+            {{form_row(form.adresse)}}
+            {{form_row(form.password)}}
+            {{form_row(form.confirm_password)}}
+             <button type="submit" class="btn btn-lg btn-order">Inscription !</button>
+        {{form_end(form)}}
+    </div>
+
+
+</section>
+{% endblock %}
