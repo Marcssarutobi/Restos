@@ -23,12 +23,27 @@
                 <a href=""> à propos</a>
                 <a href="">Contact</a>
             </nav>
+            {% if not app.user %}
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
                 <i class="fas fa-search" id="search-icon"></i>
                 <a href="{{path('app_login')}}" class="fas fa-user"></a>
                 <a href="" class="fas fa-shopping-cart"> 0</a>
             </div>
+            {% else %}
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+                <a href="#" class="fas fa-user profil"></a>
+                <a href="" class="fas fa-shopping-cart"> 0</a>
+                <div class="sub-menu">
+                    <ul class="item">
+                        <li><a class="link" href="">Profil</a></li>
+                        <li><a class="link" href="{{path('app_logout')}}">Déconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
         </header>
         {# recherche... #}
         <form action="" id="search-form" method="get">
